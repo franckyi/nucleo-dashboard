@@ -18,12 +18,12 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
-import Orders from './Orders';
+import Inquiries from './Inquiries';
 
 function Copyright(props: any) {
   return (
@@ -101,6 +101,7 @@ export default function Dashboard() {
     <ThemeProvider theme={defaultTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
+
         <AppBar position="absolute" open={open}>
           <Toolbar
             sx={{
@@ -135,6 +136,7 @@ export default function Dashboard() {
             </IconButton>
           </Toolbar>
         </AppBar>
+
         <Drawer variant="permanent" open={open}>
           <Toolbar
             sx={{
@@ -144,10 +146,10 @@ export default function Dashboard() {
               px: [1],
             }}
           >
-            <Image src="/logo.svg" className="mr-2" width={38} height={34} alt="logo"></Image>
+            <Image src="/logo.svg" className="mr-2" width={38} height={34} alt="logo" draggable="false"></Image>
             Nucleo B2B
-            <IconButton onClick={toggleDrawer}>
-              <ChevronLeftIcon />
+            <IconButton onClick={toggleDrawer} className='text-purple-300'>
+              <KeyboardArrowLeftIcon />
             </IconButton>
           </Toolbar>
           <Divider />
@@ -157,6 +159,7 @@ export default function Dashboard() {
             {secondaryListItems}
           </List>
         </Drawer>
+
         <Box
           component="main"
           sx={{
@@ -170,6 +173,7 @@ export default function Dashboard() {
           }}
         >
           <Toolbar />
+          
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
               {/* Chart */}
@@ -198,10 +202,10 @@ export default function Dashboard() {
                   <Deposits />
                 </Paper>
               </Grid>
-              {/* Recent Orders */}
+              {/* Recent Inquiries */}
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <Orders />
+                  <Inquiries />
                 </Paper>
               </Grid>
             </Grid>

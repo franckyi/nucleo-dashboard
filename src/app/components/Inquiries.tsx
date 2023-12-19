@@ -12,45 +12,45 @@ function createData(
   id: number,
   date: string,
   name: string,
-  shipTo: string,
-  paymentMethod: string,
+  location: string,
+  status: string,
   amount: number,
 ) {
-  return { id, date, name, shipTo, paymentMethod, amount };
+  return { id, date, name, location, status, amount };
 }
 
 const rows = [
   createData(
     0,
     '16 Mar, 2019',
-    'Elvis Presley',
+    'Coca Cola',
     'Tupelo, MS',
-    'VISA ⠀•••• 3719',
-    312.44,
+    'yes',
+    10120.44,
   ),
   createData(
     1,
     '16 Mar, 2019',
-    'Paul McCartney',
+    'Nike',
     'London, UK',
-    'VISA ⠀•••• 2574',
+    'yes',
     866.99,
   ),
-  createData(2, '16 Mar, 2019', 'Tom Scholz', 'Boston, MA', 'MC ⠀•••• 1253', 100.81),
+  createData(2, '16 Mar, 2019', 'Jeep', 'Boston, MA', 'no', 1000.81),
   createData(
     3,
     '16 Mar, 2019',
-    'Michael Jackson',
+    'Lebron James',
     'Gary, IN',
-    'AMEX ⠀•••• 2000',
+    'yes',
     654.39,
   ),
   createData(
     4,
     '15 Mar, 2019',
-    'Bruce Springsteen',
+    'Lidle',
     'Long Branch, NJ',
-    'VISA ⠀•••• 5919',
+    'no',
     212.79,
   ),
 ];
@@ -59,34 +59,37 @@ function preventDefault(event: React.MouseEvent) {
   event.preventDefault();
 }
 
-export default function Orders() {
+export default function Inquiries() {
   return (
     <React.Fragment>
-      <Title>Recent Orders</Title>
+      <Title>Recent Inquiries</Title>
+
       <Table size="small">
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
             <TableCell>Name</TableCell>
-            <TableCell>Ship To</TableCell>
-            <TableCell>Payment Method</TableCell>
-            <TableCell align="right">Sale Amount</TableCell>
+            <TableCell>Location</TableCell>
+            <TableCell>Status</TableCell>
+            <TableCell align="right">Amount</TableCell>
           </TableRow>
         </TableHead>
+
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.id}>
               <TableCell>{row.date}</TableCell>
               <TableCell>{row.name}</TableCell>
-              <TableCell>{row.shipTo}</TableCell>
-              <TableCell>{row.paymentMethod}</TableCell>
+              <TableCell>{row.location}</TableCell>
+              <TableCell>{row.status}</TableCell>
               <TableCell align="right">{`$${row.amount}`}</TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
+
       <Link color="primary" href="#" onClick={preventDefault} sx={{ mt: 3 }}>
-        See more orders
+        See more inquiries
       </Link>
     </React.Fragment>
   );
