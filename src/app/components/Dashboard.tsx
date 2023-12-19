@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react';
+import Image from 'next/image';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
@@ -125,7 +126,7 @@ export default function Dashboard() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              Welcome Fabio!
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
@@ -139,10 +140,12 @@ export default function Dashboard() {
             sx={{
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'flex-end',
+              justifyContent: 'center',
               px: [1],
             }}
           >
+            <Image src="/logo.svg" className="mr-2" width={38} height={34} alt="logo"></Image>
+            Nucleo B2B
             <IconButton onClick={toggleDrawer}>
               <ChevronLeftIcon />
             </IconButton>
