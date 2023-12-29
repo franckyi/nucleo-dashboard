@@ -12,65 +12,82 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import FeedIcon from '@mui/icons-material/Feed';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PublicIcon from '@mui/icons-material/Public';
+import Link from 'next/link';
 
 export const mainListItems = (
   <React.Fragment>
 
-    <ListItemButton>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Home" />
-    </ListItemButton>
+    <Link href="/">
+      <ListItemButton>
+        <ListItemIcon>
+          <BarChartIcon />
+        </ListItemIcon>
+        <ListItemText primary="Home" />
+      </ListItemButton>
+    </Link>
 
-    <ListItemButton>
-      <ListItemIcon>
-        <AttachMoneyIcon />
-      </ListItemIcon>
-      <ListItemText primary="Inquiries" />
-    </ListItemButton>
+    <Link href="/inquiries">
+      <ListItemButton>
+        <ListItemIcon>
+          <AttachMoneyIcon />
+        </ListItemIcon>
+        <ListItemText primary="Inquiries" />
+      </ListItemButton>
+    </Link>
 
-    <ListItemButton>
-      <ListItemIcon>
-        <FormatListBulletedIcon />
-      </ListItemIcon>
-      <ListItemText primary="Tasks" />
-    </ListItemButton>
+    <Link href="/tasks">
+      <ListItemButton>
+        <ListItemIcon>
+          <FormatListBulletedIcon />
+        </ListItemIcon>
+        <ListItemText primary="Tasks" />
+      </ListItemButton>
+    </Link>
 
-    <ListItemButton>
-      <ListItemIcon>
-        <PublicIcon />
-      </ListItemIcon>
-      <ListItemText primary="Map" />
-    </ListItemButton>
+    <Link href="/map">
+      <ListItemButton>
+        <ListItemIcon>
+          <PublicIcon />
+        </ListItemIcon>
+        <ListItemText primary="Map" />
+      </ListItemButton>
+    </Link>
 
-    <ListItemButton>
-      <ListItemIcon>
-        <TravelExploreIcon />
-      </ListItemIcon>
-      <ListItemText primary="Leads" />
-    </ListItemButton>
+    <Link href="/leads">
+      <ListItemButton>
+        <ListItemIcon>
+          <TravelExploreIcon />
+        </ListItemIcon>
+        <ListItemText primary="Leads" />
+      </ListItemButton>
+    </Link>
 
-    <ListItemButton>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Clients" />
-    </ListItemButton>
+    <Link href="/clients">
+      <ListItemButton>
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="Clients" />
+      </ListItemButton>
+    </Link>
+    
+    <Link href="/invoices">
+      <ListItemButton>
+        <ListItemIcon>
+          <FeedIcon />
+        </ListItemIcon>
+        <ListItemText primary="Invoices" />
+      </ListItemButton>
+    </Link>
 
-    <ListItemButton>
-      <ListItemIcon>
-        <FeedIcon />
-      </ListItemIcon>
-      <ListItemText primary="Invoices" />
-    </ListItemButton>
-
-    <ListItemButton>
-      <ListItemIcon>
-        <SettingsIcon />
-      </ListItemIcon>
-      <ListItemText primary="Settings" />
-    </ListItemButton>
+    <Link href="/settings">
+      <ListItemButton>
+        <ListItemIcon>
+          <SettingsIcon />
+        </ListItemIcon>
+        <ListItemText primary="Settings" />
+      </ListItemButton>
+    </Link>
 
   </React.Fragment>
 );

@@ -1,6 +1,6 @@
 import Dashboard from "../components/Dashboard";
 
-export default function Clients () {
+export default function Map () {
   return(
     <Dashboard />
   )
