@@ -168,14 +168,14 @@ export default function Dashboard() {
           
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
 
-          {pathname === '/' && <MainStats />}
-          {pathname === '/inquiries' && <h1>TEST</h1>}
-          {pathname === '/tasks' && <h1>TEST</h1>}
-          {pathname === '/map' && <h1>TEST</h1>}
-          {pathname === '/leads' && <h1>TEST</h1>}
-          {pathname === '/clients' && <ClientsTable />}
-          {pathname === '/invoices' && <ClientsTable />}
-          {pathname === '/settings' && <ClientsTable />}
+            {pathname === '/' && <MainStats />}
+            {pathname === '/inquiries' && <h1>TEST</h1>}
+            {pathname === '/tasks' && <h1>TEST</h1>}
+            {pathname === '/map' && <h1>TEST</h1>}
+            {pathname === '/leads' && <h1>TEST</h1>}
+            {pathname === '/clients' && <ClientsTable />}
+            {pathname === '/invoices' && <ClientsTable />}
+            {pathname === '/settings' && <ClientsTable />}
 
             <Copyright sx={{ pt: 4 }} />
           </Container>
