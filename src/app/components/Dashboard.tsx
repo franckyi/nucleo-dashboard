@@ -95,6 +95,7 @@ export default function Dashboard() {
               pr: '24px', // keep right padding when drawer closed
             }}
           >
+            
             <IconButton
               edge="start"
               color="inherit"
@@ -107,6 +108,7 @@ export default function Dashboard() {
             >
               <MenuIcon />
             </IconButton>
+
             <Typography
               component="h1"
               variant="h6"
@@ -116,11 +118,13 @@ export default function Dashboard() {
             >
               Welcome Fabio!
             </Typography>
+
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <NotificationsIcon />
               </Badge>
             </IconButton>
+
           </Toolbar>
         </AppBar>
 
@@ -139,7 +143,9 @@ export default function Dashboard() {
               <KeyboardArrowLeftIcon />
             </IconButton>
           </Toolbar>
+
           <Divider />
+
           <List component="nav">
             {mainListItems}
             <Divider sx={{ my: 1 }} />
@@ -162,6 +168,7 @@ export default function Dashboard() {
           <Toolbar />
           
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+
             <Grid container spacing={3}>
               {/* Chart */}
               <Grid item xs={12} md={8} lg={9}>
@@ -196,8 +203,10 @@ export default function Dashboard() {
                 </Paper>
               </Grid>
             </Grid>
+
             <Copyright sx={{ pt: 4 }} />
           </Container>
+          
         </Box>
       </Box>
     </ThemeProvider>
