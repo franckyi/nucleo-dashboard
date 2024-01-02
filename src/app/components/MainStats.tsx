@@ -2,7 +2,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Chart from './Chart';
 import Deposits from './Deposits';
-import Inquiries from './Inquiries';
+import InquiriesTable from '../inquiries/InquiriesTable';
 
 export default function MainStats() {
   return (
@@ -36,7 +36,7 @@ export default function MainStats() {
       {/* Recent Inquiries */}
       <Grid item xs={12}>
         <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-          <Inquiries />
+          <InquiriesTable />
         </Paper>
       </Grid>
     </Grid>
