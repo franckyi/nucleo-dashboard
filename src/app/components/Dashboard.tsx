@@ -114,7 +114,14 @@ export default function Dashboard() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Welcome Fabio!
+              {pathname === '/' && "Welcome Fabio!"}
+              {pathname === '/inquiries' && "Inquiries"}
+              {pathname === '/tasks' && "Tasks"}
+              {pathname === '/map' && "Map"}
+              {pathname === '/leads' && "Leads"}
+              {pathname === '/clients' && "Clients"}
+              {pathname === '/invoices' && "Invoices"}
+              {pathname === '/settings' && "Settings"}
             </Typography>
 
             <IconButton color="inherit">
