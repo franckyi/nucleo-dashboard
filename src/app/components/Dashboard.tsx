@@ -23,7 +23,7 @@ import Copyright from './Copyright';
 import MainStats from './MainStats';
 import ClientsTable from '../clients/ClientsTable';
 import AppBarProps from '../types/AppBarProps';
-import InquiriesTable from '../inquiries/InquiriesTable';
+import Inquiries from './Inquiries';
 import InvoicesTable from '../invoices/InvoicesTable';
 
 const drawerWidth: number = 240;
@@ -178,7 +178,7 @@ export default function Dashboard() {
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
 
             {pathname === '/' && <MainStats />}
-            {pathname === '/inquiries' && <InquiriesTable />}
+            {pathname === '/inquiries' && <Inquiries />}
             {pathname === '/tasks' && <h1>TEST</h1>}
             {pathname === '/map' && <h1>TEST</h1>}
             {pathname === '/leads' && <h1>TEST</h1>}
