@@ -25,6 +25,7 @@ import ClientsTable from "../clients/ClientsTable";
 import AppBarProps from "../types/AppBarProps";
 import Inquiries from "./Inquiries";
 import InvoicesTable from "../invoices/InvoicesTable";
+import LightDarkSwitch from "./LightDarkSwitch";
 
 const drawerWidth: number = 240;
 
@@ -139,6 +140,8 @@ export default function Dashboard() {
               {pathname === "/settings" && "Settings"}
             </Typography>
 
+            <LightDarkSwitch />
+
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <NotificationsIcon />
@@ -165,7 +168,7 @@ export default function Dashboard() {
               draggable="false"
             ></Image>
             Nucleo B2B
-            <IconButton onClick={toggleDrawer} className="text-purple-300">
+            <IconButton onClick={toggleDrawer} color="primary">
               <KeyboardArrowLeftIcon />
             </IconButton>
           </Toolbar>
