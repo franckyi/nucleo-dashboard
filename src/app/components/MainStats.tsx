@@ -1,8 +1,9 @@
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Chart from './Chart';
-import Deposits from './Deposits';
-import InquiriesTable from '../inquiries/InquiriesTable';
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Chart from "./Chart";
+import Deposits from "./Deposits";
+import InquiriesTable from "../dashboard/inquiries/InquiriesTable";
+import SimpleTable from "./table";
 
 export default function MainStats() {
   return (
@@ -12,8 +13,8 @@ export default function MainStats() {
         <Paper
           sx={{
             p: 2,
-            display: 'flex',
-            flexDirection: 'column',
+            display: "flex",
+            flexDirection: "column",
             height: 240,
           }}
         >
@@ -25,8 +26,8 @@ export default function MainStats() {
         <Paper
           sx={{
             p: 2,
-            display: 'flex',
-            flexDirection: 'column',
+            display: "flex",
+            flexDirection: "column",
             height: 240,
           }}
         >
@@ -35,10 +36,10 @@ export default function MainStats() {
       </Grid>
       {/* Recent Inquiries */}
       <Grid item xs={12}>
-        <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-          <InquiriesTable />
+        <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
+          <SimpleTable />
         </Paper>
       </Grid>
     </Grid>
-  )
+  );
 }

@@ -21,10 +21,10 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
 import Copyright from "./Copyright";
 import MainStats from "./MainStats";
-import ClientsTable from "../clients/ClientsTable";
+import ClientsTable from "./table";
 import AppBarProps from "../types/AppBarProps";
 import Inquiries from "./Inquiries";
-import InvoicesTable from "../invoices/InvoicesTable";
+import InvoicesTable from "../dashboard/invoices/InvoicesTable";
 import LightDarkSwitch from "./LightDarkSwitch";
 
 const drawerWidth: number = 240;
